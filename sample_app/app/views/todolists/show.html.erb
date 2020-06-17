@@ -1,0 +1,11 @@
+<h2>title</h2>
+<p><%= @list.title %></p>
+<h2>content</h2>
+<p><%= @list.body %></p>
+<h2>image</h2>
+<%= attachment_image_tag @list, :image, format: 'jpeg', size: "300x300" %>
+
+<%= link_to "edit", edit_todolist_path(@list.id) %>
+
+<%= link_to "remove", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "do you want to remove?" %>
+
